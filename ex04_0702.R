@@ -45,6 +45,8 @@ df3 <- df2 %>%
 # Q : 성별에 9개 몇 개인지 확인한 후 있으면 NA로 처리하시오.
 df3 %>% filter(sex == 9)
 table(df3$sex)
+a1 <- table(unlist(df3$sex))
+a1[2]
 
 # Q : 성별 항목에 1은 male, 2는 female로 변경한 후 sex1에 넣으시오.
 df3$sex1 <- ifelse(df3$sex == 1, "male", "female")
